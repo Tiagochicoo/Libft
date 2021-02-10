@@ -6,18 +6,19 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 23:02:16 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/09 20:53:59 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/10 21:59:36 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <strings.h>
-# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, sizer_t n);
+void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);

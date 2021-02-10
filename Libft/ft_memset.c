@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 22:45:40 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/09 20:44:43 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/10 20:27:00 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 void	*memset(void *s, int c, size_t n)
 {
-	unsigned char	*p;
+	size_t i;
 
-	*p = s;
-	while (n > 0)
+	i = 0;
+	while (i < n)
 	{
-		*p = c;
-		p++;
-		n--;
-		if (*p == 0)
-			break ;
+		((unsigned char *)s)[i] = c;
+		i++;
 	}
 	return (s);
 }
