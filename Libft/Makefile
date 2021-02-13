@@ -6,22 +6,22 @@
 #    By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/08 22:20:21 by tpereira          #+#    #+#              #
-#    Updated: 2021/02/10 22:03:01 by tpereira         ###   ########.fr        #
+#    Updated: 2021/02/10 22:25:10 by tpereira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	= libft.a
 CC 		= gcc
 FLAGS 	= -Wall -Werror -Wextra
-SRCS 	= ./*.c
+SRCS 	= ${wildcard *.c}
 OBJS 	= ${SRCS:.c=.o}
-INCLUDE = libft.h
+ 
 RM 		= rm -f
 
 .c.o:
-	${CC} ${FLAGS} -I ${INCLUDE} -c $< -o ${<:.c=.o}
+	${CC} ${FLAGS} -I include -c $< -o ${<:.c=.o}
 
-${NAME}: ${OBJS} ${INCLUDE}
+${NAME}: ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 	ranlib ${NAME}
 
