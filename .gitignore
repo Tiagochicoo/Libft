@@ -1,3 +1,6 @@
 *.swp
 *.DStore
 *a.out
+*.o
+*.a
+*.so

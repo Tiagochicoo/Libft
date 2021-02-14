@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
+/*   By: tpereira <tpereira@student.42Lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 11:46:45 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/13 12:24:59 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/14 17:43:16 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,26 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char 			*temp;
-	char 			*dest2;
-	const char 		*src2;
-	unsigned int 	i;
+	unsigned int	i;
 
-	dest2 = (char *)dest;
-	src2 = (const char *)src;
-
-	temp = (char *)malloc(sizeof(char) * n);
-	if (temp == NULL)
+	if (!dest && !src)
+		return (NULL);
+	if (dest > src)
 	{
-		return (0);
+		while (n > 0)
+		{
+			((char *)dest)[n - 1] = ((char *)src)[n - 1];
+			n--;
+		}
 	}
 	else
 	{
 		i = 0;
 		while (i < n)
 		{
-			*(temp + i) = *(src2 +i);
+			((char *)dest)[i] = ((char *)src)[i];
 			i++;
 		}
-		i = 0;
-		while (i < n)
-		{
-			*(dest2 + i) = *(temp + i);
-			i++;
-		}
-		free(temp);
 	}
 	return (dest);
 }

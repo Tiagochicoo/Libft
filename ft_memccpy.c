@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpereira <tpereira@student.42Lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/13 12:29:03 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/14 17:20:09 by tpereira         ###   ########.fr       */
+/*   Created: 2021/02/14 16:48:31 by tpereira          #+#    #+#             */
+/*   Updated: 2021/02/14 17:16:55 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	size_t		i;
-	const char	*p;
+	size_t			i;
+	unsigned char	*dest2;
+	unsigned char	*src2;
 
-	p = (const char *)s;
+	src2 = (unsigned char*)src;
+	dest2 = (unsigned char*)dest;
 	i = 0;
-	while (i < n)
+	while (i < n && src2[i] != (unsigned char)c)
 	{
-		if (p[i] == (char)c)
-		{
-			return ((void *)(p + i));
-		}
+		dest2[i] = src2[i];
 		i++;
 	}
-	return (NULL);
+	if (i == n)
+		return (NULL);
+	else
+	{
+		dest2[i] = src2[i];
+		i++;
+		return (&dest2[i]);
+	}
 }
