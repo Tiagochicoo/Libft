@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@student.42Lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 19:25:14 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/17 19:28:59 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/17 21:33:31 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,5 @@ int		ft_isalpha(int c)
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
