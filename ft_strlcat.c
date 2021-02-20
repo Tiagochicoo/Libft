@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpereira <tpereira@student.42Lisboa.com    +#+  +:+       +#+        */
+/*   By: tpereira <tpereira@student.42Lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 18:18:57 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/14 18:25:23 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/20 16:01:32 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	srcSize;
-	size_t	destSize;
+	size_t	src_size;
+	size_t	dest_size;
 	size_t	i;
 
 	i = 0;
-	srcSize = 0;
-	destSize = 0;
-	while (src[srcSize])
-		srcSize++;
+	src_size = 0;
+	dest_size = 0;
+	while (src[src_size])
+		src_size++;
 	if (size == 0)
-		return (srcSize);
-	while (destSize < size && dst[destSize])
-		destSize++;
-	if (size <= destSize)
-		return (size + srcSize);
+		return (src_size);
+	while (dest_size < size && dst[dest_size])
+		dest_size++;
+	if (size <= dest_size)
+		return (size + src_size);
 	i = 0;
-	while (size && (--size - destSize) && src[i])
+	while (size && (--size - dest_size) && src[i])
 	{
-		dst[destSize + i] = src[i];
+		dst[dest_size + i] = src[i];
 		i++;
 	}
-	dst[destSize + i] = '\0';
-	return (srcSize + destSize);
+	dst[dest_size + i] = '\0';
+	return (src_size + dest_size);
 }

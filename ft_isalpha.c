@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpereira <tpereira@student.42Lisboa.com    +#+  +:+       +#+        */
+/*   By: tpereira <tpereira@student.42Lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 19:25:14 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/17 21:33:31 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/20 15:55:38 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

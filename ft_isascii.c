@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpereira <tpereira@student.42Lisboa.com    +#+  +:+       +#+        */
+/*   By: tpereira <tpereira@student.42Lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 21:19:19 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/20 10:48:37 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/20 15:51:42 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_isascii(int c)
 {
-	return (c >= 0 && c <= 127);	
+	return (c >= 0 && c < 127);
 }

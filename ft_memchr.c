@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpereira <tpereira@student.42Lisboa.com    +#+  +:+       +#+        */
+/*   By: tpereira <tpereira@student.42Lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 12:29:03 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/14 17:20:09 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/20 15:56:23 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

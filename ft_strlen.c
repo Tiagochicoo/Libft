@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpereira <tpereira@student.42Lisboa.com    +#+  +:+       +#+        */
+/*   By: tpereira <tpereira@student.42Lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 17:55:06 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/14 17:56:26 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/20 15:58:11 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

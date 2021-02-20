@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 13:11:17 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/20 14:57:27 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/20 15:57:10 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,3 @@ int		ft_atoi(const char *str)
 	}
 	return (num);
 }
-
