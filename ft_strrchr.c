@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@student.42Lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 22:52:45 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/18 23:08:32 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/20 10:37:20 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (c == '\0')
-		return ((char *)s[last + 1]);
-	return (s[last]);
+		return ((char *)(s + last + 1));
+	return ((char *)(s + last));
 }
