@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 12:52:19 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/20 13:09:00 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/27 11:35:24 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big);
 	while (big[i] && i < len)
 	{
-		while (little[ii] && big[i] == little[ii])
+		ii = 0;
+		while (big[i + ii] == little[ii] && i + ii < len)
 		{
-			i++;
+			if (little[ii + 1] == 0)
+				return ((char *)big + i);
 			ii++;
-			size++;
 		}
-		if (ii == ft_strlen(little))
-			return ((char *)big + (i - size));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
