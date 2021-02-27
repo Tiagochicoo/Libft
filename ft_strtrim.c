@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 14:40:35 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/21 22:21:38 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/27 10:04:19 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	from;
 	size_t	to;
 
+	if (s1 == 0)
+		return (NULL);
 	from = 0;
 	to = ft_strlen(s1);
 	while (is_set(set, s1[from]) && s1[from])
