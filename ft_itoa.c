@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 12:19:17 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/27 20:10:10 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/28 17:34:05 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,7 @@ char		*ft_itoa(int n)
 
 	i = 0;
 	j = n;
-	str = ftl_malloc(j, n);
-	if (!str)
+	if (!(str = ftl_malloc(j, n)))
 		return (NULL);
 	if (n < 0)
 		j *= -1;

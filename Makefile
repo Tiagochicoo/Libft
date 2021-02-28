@@ -6,7 +6,7 @@
 #    By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/08 22:20:21 by tpereira          #+#    #+#              #
-#    Updated: 2021/02/28 17:08:26 by tpereira         ###   ########.fr        #
+#    Updated: 2021/02/28 17:11:08 by tpereira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ SRCS 		= ft_atoi.c \
 # 			ft_lstmap.c 
 OBJS 	= ${SRCS:.c=.o}
 OBJS_BONUS = ${SRSC_BONUS:.c=.o}
-CFLAGS  :=  -ansi -pedantic -Wall -W -Werror -g3 -fPIC
+CFLAGS  :=  -ansi  -Wall -W -Werror -g3 -fPIC
 RM 		= rm -f
 
 .c.o:
