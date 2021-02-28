@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 23:02:16 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/27 09:24:38 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/28 12:36:47 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *str, char charset);
 char	*ft_itoa(int n);
-char	*ft_strmapi(char const *s, char (*f)(size_t, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 
 #endif

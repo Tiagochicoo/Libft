@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
+/*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 12:19:17 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/27 12:54:12 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/27 20:10:10 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	count_int(int n)
 	return (count);
 }
 
-static char	*ftl_malloc(long j, size_t n)
+static char	*ftl_malloc(long j, int n)
 {
 	char *str;
 
