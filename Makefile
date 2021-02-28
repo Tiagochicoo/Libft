@@ -6,7 +6,7 @@
 #    By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/08 22:20:21 by tpereira          #+#    #+#              #
-#    Updated: 2021/02/28 16:08:01 by tpereira         ###   ########.fr        #
+#    Updated: 2021/02/28 17:08:26 by tpereira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,16 +46,16 @@ SRCS 		= ft_atoi.c \
 			ft_strtrim.c \
 			ft_substr.c \
 			ft_tolower.c \
-			ft_toupper.c \
-SRSC_BONUS 	= ft_lstadd_back.c \
-			ft_lstadd_front.c \
-			ft_lstlast.c \
-			ft_lstnew.c \
-			ft_lstsize.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c \
-			ft_lstmap.c \
+			ft_toupper.c 
+# SRSC_BONUS 	= ft_lstadd_back.c \
+# 			ft_lstadd_front.c \
+# 			ft_lstlast.c \
+# 			ft_lstnew.c \
+# 			ft_lstsize.c \
+# 			ft_lstdelone.c \
+# 			ft_lstclear.c \
+# 			ft_lstiter.c \
+# 			ft_lstmap.c 
 OBJS 	= ${SRCS:.c=.o}
 OBJS_BONUS = ${SRSC_BONUS:.c=.o}
 CFLAGS  :=  -ansi -pedantic -Wall -W -Werror -g3 -fPIC

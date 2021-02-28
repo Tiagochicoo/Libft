@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 15:15:49 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/28 15:18:24 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/28 16:50:30 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (s == NULL)
+		return ;
 	while (*s)
 	{
 		write(fd, s, 1);
