@@ -6,7 +6,7 @@
 #    By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/08 22:20:21 by tpereira          #+#    #+#              #
-#    Updated: 2021/03/03 22:12:55 by tpereira         ###   ########.fr        #
+#    Updated: 2021/03/04 21:10:16 by tpereira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,15 +69,15 @@ so:
 
 all: ${NAME}
 
-bonus: ${NAME} ${OBJS_BONUS}
+bonus: $(NAME) $(OBJS_BONUS)
 	ar -rcs ${NAME} ${OBJS_BONUS}
 
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${OBJS_BONUS}
 
 fclean: clean
 	${RM} ${NAME}
 
 re: fclean all
 
-.PHONY: clean fclean all re
+.PHONY: clean fclean all re bonus
