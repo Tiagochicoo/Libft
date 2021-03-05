@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
+/*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 21:44:20 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/05 18:49:21 by tpereira         ###   ########.fr       */
+/*   Created: 2021/03/05 19:56:11 by tpereira          #+#    #+#             */
+/*   Updated: 2021/03/05 20:01:29 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *temp;
-	
-	if (lst != NULL)
-		temp = lst;
-	else
-		return (NULL);
-	while (temp->next != NULL)
+	t_list *new;
+
+	new = lst;
+	while (new)
 	{
-		temp = temp->next;
-	}
-	return (temp);
+		f(new->content);
+		new = new->next;
+	}	
 }

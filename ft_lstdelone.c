@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
+/*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 21:44:20 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/05 18:49:21 by tpereira         ###   ########.fr       */
+/*   Created: 2021/03/05 19:43:03 by tpereira          #+#    #+#             */
+/*   Updated: 2021/03/05 19:44:28 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list *temp;
-	
-	if (lst != NULL)
-		temp = lst;
-	else
-		return (NULL);
-	while (temp->next != NULL)
-	{
-		temp = temp->next;
-	}
-	return (temp);
+	del(lst->content);
+	free(lst);
+	lst = NULL;
 }
