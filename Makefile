@@ -6,83 +6,37 @@
 #    By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/08 22:20:21 by tpereira          #+#    #+#              #
-#    Updated: 2021/03/05 20:50:07 by tpereira         ###   ########.fr        #
+#    Updated: 2021/03/06 12:54:39 by tpereira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= libft.a
-CC 			= gcc
-FLAGS 		= -Wall -Werror -Wextra
-SRCS 		= ft_atoi.c \
-			ft_bzero.c \
-			ft_calloc.c \
-			ft_isalnum.c \
-			ft_isalpha.c \
-			ft_isascii.c \
-			ft_isdigit.c \
-			ft_isprint.c \
-			ft_itoa.c \
-			ft_memccpy.c \
-			ft_memchr.c \
-			ft_memcmp.c \
-			ft_memcpy.c \
-			ft_memmove.c \
-			ft_memset.c \
-			ft_putchar_fd.c \
-			ft_putendl_fd.c \
-			ft_putnbr_fd.c \
-			ft_putstr_fd.c \
-			ft_split.c \
-			ft_strchr.c \
-			ft_strdup.c \
-			ft_strjoin.c \
-			ft_strlcat.c \
-			ft_strlcpy.c \
-			ft_strlen.c \
-			ft_strmapi.c \
-			ft_strncmp.c \
-			ft_strnstr.c \
-			ft_strrchr.c \
-			ft_strtrim.c \
-			ft_substr.c \
-			ft_tolower.c \
-			ft_toupper.c 
-SRSC_BONUS 	= ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c \
-			ft_lstmap.c
-OBJS 	= ${SRCS:.c=.o}
-OBJS_BONUS = ${SRSC_BONUS:.c=.o}
-CFLAGS  :=  -ansi  -Wall -W -Werror -g3 -fPIC
-RM 		= rm -f
-
-.c.o:
-	${CC} ${FLAGS} -I include -c $< -o ${<:.c=.o}
-
-$(NAME): ${OBJS}
-	ar rcs ${NAME} ${OBJS}
-	ranlib ${NAME}
-
-so:
-	${CC} -fPIC ${CFLAGS} -c ${OBJS:.o=.c} ${OBJS_BONUS:.o=.c}
-	gcc -shared -o libft.so ${OBJS}
-
-all: ${NAME}
-
-bonus: $(NAME) $(OBJS_BONUS)
-	ar -rcs ${NAME} ${OBJS_BONUS}
-
+SRCS =  ./ft_substr.c ./ft_strjoin.c ./ft_strtrim.c ./ft_split.c ./ft_itoa.c ./ft_strmapi.c ./ft_putchar_fd.c           \
+        ./ft_putstr_fd.c ./ft_putendl_fd.c ./ft_putnbr_fd.c ./ft_atoi.c ./ft_tolower.c ./ft_toupper.c ./ft_isprint.c    \
+        ./ft_isascii.c ./ft_isalnum.c ./ft_isdigit.c ./ft_isalpha.c ./ft_strncmp.c ./ft_strnstr.c ./ft_strchr.c         \
+        ./ft_strrchr.c ./ft_strlcat.c ./ft_strlcpy.c ./ft_strlen.c ./ft_strdup.c ./ft_memset.c ./ft_bzero.c             \
+        ./ft_memcpy.c ./ft_memccpy.c ./ft_memmove.c ./ft_memchr.c ./ft_memcmp.c ./ft_calloc.c
+OBJS =  $(SRCS:.c=.o)
+BSRCS = ./ft_lstnew.c ./ft_lstadd_front.c ./ft_lstsize.c ./ft_lstlast.c ./ft_lstadd_back.c ./ft_lstdelone.c             \
+        ./ft_lstclear.c ./ft_lstiter.c ./ft_lstmap.c
+BOBJS = $(BSRCS:.c=.o)
+NAME =  libft.a
+SO =    libft.so
+all:        $(NAME)
+$(NAME):
+	gcc -Wall -Wextra -Werror -c $(SRCS)
+	ar -rcs $(NAME) $(OBJS)
 clean:
-	${RM} ${OBJS} ${OBJS_BONUS}
-
-fclean: clean
-	${RM} ${NAME}
-
-re: fclean all
-
-.PHONY: clean fclean all re bonus
+	rm -f $(OBJS) $(BOBJS)
+soclean:    clean
+	rm -f $(SO)
+fclean:     clean
+	rm -f $(NAME)
+	rm -f $(SO)
+re:         fclean all
+bonus:
+	gcc -Wall -Wextra -Werror -c $(BSRCS)
+	ar -rcs $(NAME) $(BOBJS)
+so:         $(OBJS) $(BOBJS)
+	gcc -shared -o $(SO) $(OBJS) $(BOBJS)
+	
+.PHONY: so bonus re fclean soclean clean all
