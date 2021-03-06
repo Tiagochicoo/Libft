@@ -6,13 +6,13 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 15:23:50 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/28 15:27:34 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/06 11:49:55 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	long	num;
 

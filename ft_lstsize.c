@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:12:17 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/03 21:41:37 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/06 11:51:51 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_lstsize(t_list *lst)
 {
-	int	count;
-	t_list *temp;
+	int		count;
+	t_list	*temp;
 
 	temp = lst;
 	count = 0;

@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:44:20 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/05 18:49:21 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/06 11:50:55 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list *temp;
-	
+
 	if (lst != NULL)
 		temp = lst;
 	else

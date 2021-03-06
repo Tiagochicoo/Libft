@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 20:02:09 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/05 20:51:43 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/06 11:46:07 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (NULL);
 	next1 = lst->next;
 	next2 = new;
-	while(1 == 1)
+	while (1 == 1)
 	{
 		if (next1 == NULL)
 			break ;

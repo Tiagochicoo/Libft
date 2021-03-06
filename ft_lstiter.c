@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 19:56:11 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/05 20:01:29 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/06 11:49:27 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		f(new->content);
 		new = new->next;
-	}	
+	}
 }
