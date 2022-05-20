@@ -6,37 +6,37 @@
 #    By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/08 22:20:21 by tpereira          #+#    #+#              #
-#    Updated: 2021/03/06 12:54:39 by tpereira         ###   ########.fr        #
+#    Updated: 2022/05/18 23:45:04 by tpereira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =  ./ft_substr.c ./ft_strjoin.c ./ft_strtrim.c ./ft_split.c ./ft_itoa.c ./ft_strmapi.c ./ft_putchar_fd.c           \
-        ./ft_putstr_fd.c ./ft_putendl_fd.c ./ft_putnbr_fd.c ./ft_atoi.c ./ft_tolower.c ./ft_toupper.c ./ft_isprint.c    \
-        ./ft_isascii.c ./ft_isalnum.c ./ft_isdigit.c ./ft_isalpha.c ./ft_strncmp.c ./ft_strnstr.c ./ft_strchr.c         \
-        ./ft_strrchr.c ./ft_strlcat.c ./ft_strlcpy.c ./ft_strlen.c ./ft_strdup.c ./ft_memset.c ./ft_bzero.c             \
-        ./ft_memcpy.c ./ft_memccpy.c ./ft_memmove.c ./ft_memchr.c ./ft_memcmp.c ./ft_calloc.c
+INC_PATH = -Iincludes
+SRCS = $(wildcard ./srcs/*.c)
 OBJS =  $(SRCS:.c=.o)
-BSRCS = ./ft_lstnew.c ./ft_lstadd_front.c ./ft_lstsize.c ./ft_lstlast.c ./ft_lstadd_back.c ./ft_lstdelone.c             \
-        ./ft_lstclear.c ./ft_lstiter.c ./ft_lstmap.c
-BOBJS = $(BSRCS:.c=.o)
 NAME =  libft.a
 SO =    libft.so
-all:        $(NAME)
-$(NAME):
-	gcc -Wall -Wextra -Werror -c $(SRCS)
-	ar -rcs $(NAME) $(OBJS)
+
+.c.o:
+	@$(CC) -g $(CFLAGS) -fPIC -c $^ -o $(<:.c=.o) -I $(INC_PATH)
+all:		$(NAME)
+so:			$(SO)
+$(NAME):	$(OBJS)
+	@ar -rcs $(NAME) $(OBJS)
+	@printf "\e[1;34m ╔════════════════════════════════════╗\e[0m\n"
+	@printf "\e[1;34m█▓▒░	     Compiled Libft	     ░▒▓█ \e[0m\n"
+	@printf "\e[1;34m ╚════════════════════════════════════╝\e[0m\n"
+$(SO):		$(OBJS)
+	@gcc -shared -o $(SO) $^
 clean:
-	rm -f $(OBJS) $(BOBJS)
+	@rm -f ./srcs/*.o
+	@printf "\e[31;5;200m ╔════════════════════════════════════╗\e[0m\n"
+	@printf "\e[31;5;200m░▒▓█         Cleaned Libft  	    █▓▒░\e[0m\n"
+	@printf "\e[31;5;200m ╚════════════════════════════════════╝\e[0m\n"
 soclean:    clean
-	rm -f $(SO)
+	@rm -f $(SO)
 fclean:     clean
-	rm -f $(NAME)
-	rm -f $(SO)
+	@rm -f $(NAME)
+	@rm -f $(SO)
 re:         fclean all
-bonus:
-	gcc -Wall -Wextra -Werror -c $(BSRCS)
-	ar -rcs $(NAME) $(BOBJS)
-so:         $(OBJS) $(BOBJS)
-	gcc -shared -o $(SO) $(OBJS) $(BOBJS)
-	
+
 .PHONY: so bonus re fclean soclean clean all
